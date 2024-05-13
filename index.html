@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+      /* Override default styles */
+      body {
+            margin: 0;
+            padding: 0;
+        }
+      .swiper-container {
+          width: 100%;
+          height: auto;
+          overflow-x: auto;
+          overflow-y: scroll;
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none;
+          
+      }
+      .swiper-wrapper {
+      display: flex;
+     
+    }
+
+      .swiper-slide img {
+          border-radius: 15px;
+          width: 500px;
+          height: 600px;
+          
+          
+      }
+    .swiper-slide:last-child {
+      margin-right: 0; /* Remove margin from last slide to prevent overflow */
+    }
+  </style>
+</head>
+
+<body >
+    <div class="bg-gray-100 ">
+        <div>
+            <nav class="static">
+                   <ul class="flex mx-40 justify-evenly space-y-2">
+                        <li><a href="#"><img class="h-10 bg-gray-200" src="/img/download.png"></a></li>
+                        <li><a href="#" class="text-black-600 hover:text-gray-800">Store</a></li>
+                        <li><a href="#" class="text-black-600 hover:text-gray-800">Mac</a></li>
+                        <li><a href="#" class="text-balck-600 hover:text-gray-800">iPad</a></li>
+                        <li><a href="#" class="text-black-600 hover:text-gray-800">iPhone</a></li>
+                        <li><a href="#" class="text-black-600 hover:text-gray-800">Watch</a></li>
+                        <li><a href="#" class="text-black-600 hover:text-gray-800">AirPods</a></li>
+                        <li><a href="#" class="text-black-600 hover:text-gray-800">Tv & Home</a></li>
+                        <li><a href="#" class="text-black-600 hover:text-gray-800">Entertainment</a></li>
+                        <li><a href="#" class="text-black-600 hover:text-gray-800">Accessories</a></li>
+                        <li><a href="#" class="text-black-600 hover:text-gray-800">Support</a></li>
+                    </ul>
+            </nav>
+        </div>
+        <div class="bg-white text-center py-4 mx-0">
+            Get up to 24 months No Cost EMI on all iPhone models from most leading banks.§<a href="Learn more">Learn
+                more</a>
+        </div>
+        <div class="mx-40 py-20 text-7xl font-semibold ">
+            <div class="flex">Store. <p class="text-gray-500"> The best way to buy the </p></div>
+            <p class="text-gray-500">products you love.</p>
+        </div>
+        <div class="pb-20 mx-20">
+            <div class="flex justify-evenly">
+                <a href="#"><img class="h-24 " src="/img/store-card-13-mac-nav-202310.png"><p class="text-center font-semibold text-lg mt-5">Mac</p></a>
+                <a href="#"><img class="h-24 " src="/img/store-card-13-iphone-nav-202309_GEO_EMEA.png"><p class="text-center font-semibold text-lg mt-5">iPhone</p></a>
+                <a href="#"><img class="h-24 " src="img/store-card-13-ipad-nav-202405.png"><p class="text-center font-semibold text-lg mt-5">iPad</p></a>
+                <a href="#"><img class="h-24 " src="/img/store-card-13-watch-nav-202309_GEO_IN.png"><p class="text-center font-semibold text-lg mt-5">Apple Watch</p></a>
+                <a href="#"><img class="h-24 " src="/img/store-card-13-airpods-nav-202209.png"><p class="text-center font-semibold text-lg mt-5">AirPods</p></a>
+                <a href="#"><img class="h-24 " src="/img/store-card-13-airtags-nav-202108.png"><p class="text-center font-semibold text-lg mt-5">AirTag</p></a>
+                <a href="#"><img class="h-24 " src="/img/store-card-13-appletv-nav-202210.png"><p class="text-center font-semibold text-lg mt-5">Apple TV 4k</p></a>
+                <a href="#"><img class="h-24 " src="img/store-card-13-homepod-nav-202301.png"><p class="text-center font-semibold text-lg mt-5">HomePod</p></a>
+                <a href="#"><img class="h-24 " src="/img/store-card-13-accessories-nav-202403.png"><p class="text-center font-semibold text-lg mt-5">Accessories</p></a>
+            </div>
+        </div>
+        <div >
+            <div class=" mx-20 flex font-bold text-4xl mb-7">The latest. <p class="text-gray-500">Take a look at
+                what’s new right now.</p></div>
+            <div class="container mx-auto ">
+              <div class="swiper-container">
+                <div class="swiper-wrapper ">
+                      <!-- Swiper Slides -->
+                      <div class="swiper-slide ">
+                       <div class="flex space-x-8 ">
+                          <div class="relative"><a href="#"><img class=" shadow-lg 1/3" src="/img/store-card-40-ipad-pro-202405.jpeg"
+                            alt="iPad Pro"><div class="absolute  text-gray-100 top-8 left-10">
+                            <p class="text-l mb-2">IPAD PRO</p><p class="text-3xl font-bold">Thinpossible.</p><p class="text-2xl mt-2">From Rs 99900.00*</p></a></div>
+                          </div>
+                          <div class="relative">
+                            <a href="#"><img class="shadow-lg w-1/3"
+                              src="/img/store-card-40-ipad-air-202405.jpeg" alt="iPad Air"><div class="absolute  top-8 left-10"><p class="text-gray-500" >
+                                IPAD AIR</p>
+                                <p class="text-4xl font-semibold">Fresh Air.</p>
+                                <p class="text-2xl mt-2">From ₹59900.00</p></a></div>
+                            </div>
+                     
+                          <div class="relative">
+                            <a href="#"><img class="shadow-lg w-1/3"
+                              src="/img/store-card-40-iphone-15-202309.jpeg" alt="iPhone 15"><div class="absolute text-2xl  top-8 left-10"><p class="text-gray-500">
+                                IPHONE 15</p>
+                               <p class="text-4xl font-semibold">Newphoria</p> 
+                                <p class="text-2xl mt-2">From ₹3329.00/mo. for 24 mo. with No Cost EMI§ or ₹79900.00‡</p></a></div>
+                           </div> 
+                          </div>       
+                      </div>
+                      <div class="swiper-slide ">
+                        <div class="flex space-x-8 ml-8 ">
+                          <div class="relative">
+                              <a href="#"><img class="shadow-lg w-1/38"
+                                  src="/img/store-card-40-macbook-air-202402.jpeg" alt="Macbook Air"><div class="absolute  top-8  left-10">
+                                  <p class="text-gray-500">MACBOOK AIR</p>
+                                  <p class="text-4xl font-semibold">  Designed to go places.</p>
+                                   <p class="text-2xl mt-2"> From ₹99900.00‡</p></a></div>
+                           </div>
+                           <div class="relative">
+                             <a href="#"><img class="shadow-lg w-1/3"
+                                  src="/img/store-card-40-iphone-15-pro-202309.jpeg" alt="iPad Pro"><div class="absolute text-gray-100 top-8 left-10"><p>
+                                    IPHONE 15 PRO</p>
+                                    <p class="text-4xl font-semibold"> Titanium</p>
+                                    <p class="text-2xl mt-2">From ₹5621.00/mo. for 24 mo. with No Cost EMI§ or ₹134900.00‡</p></a></div>
+                                    </div>
+                            <div class="relative">       
+                              <a href="#"><img class="shadow-lg w-1/3"
+                                  src="/img/store-card-40-watch-s9-202309_GEO_IN.jpeg" alt="Watch S9"><div class="absolute  text-gray-100  top-8 left-10"><p >
+                                    APPLE WATCH SERIES 9</p>
+                                    <p class="text-4xl font-semibold" >Smarter. Brighter. Mightier.</p>
+                                    <p class="text-2xl mt-2">From ₹41900.00‡</p></a></div>
+                               </div>     
+                          </div>      
+                      </div>
+                      <div class="swiper-slide ">
+                        <div class="flex space-x-8 ml-8">
+                          <div class="relative">
+                           <a href="#"><img class="shadow-lg w-1/3"
+                            src="/img/store-card-40-ipad-202310_GEO_IN.jpeg" alt="Watch S9"><div class="absolute top-8 left-10"><p class="text-gray-500">
+                              IPAD</p>
+                              <p class="text-4xl font-semibold" > Loveable. Drawable. Magical.</p>
+                              <p class="text-2xl mt-2"> From ₹34900.00‡</p></a></div>
+                              </div>
+                          <div class="relative">
+                            <a href="#"><img class="shadow-lg w-1/3"
+                                  src="/img/store-card-40-macbook-pro-202310.jpeg" alt="Macbook Pro"><div class="absolute top-8 left-10"><p class="text-gray-500">
+                                    MACBOOK PRO</p>
+                                  <p class="text-4xl font-semibold" >  Mind-blowing. <br>
+                                    Head-turning.</p>
+                                   <p> From ₹169900.00‡</p></a></div>
+                                  </div>
+                           <div class="relative">
+                            <a href="#"><img class="shadow-lg 1/3"
+                                  src="img/store-card-40-watch-ultra-202309_GEO_IN.jpeg" alt="Watch Ultra"><div class="absolute  top-8 left-10"><p class="text-gray-500">
+                                    APPLE WATCH ULTRA 2 </p>
+                                  <p class="text-4xl font-semibold" > Next-level adventure.</p>
+                                   <p class="text-2xl mt-2"> From ₹89900.00‡</p></a></div>
+                                  </div>
+                          
+                        </div>          
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="flex space-x-8  ">
+                          <div class="relative">  
+                            <a href="#"><img class="shadow-lg w-1/2"
+                                src="img/store-card-40-watch-se-202403_GEO_IN.jpeg" alt="Watch SE"><div class="absolute top-8 left-10"><p class="text-gray-500">
+                                  APPLE WATCH SE</p>
+                                  <p class="text-4xl font-semibold" >A great deal to love.</p>
+                                <p class="text-2xl mt-2"> From ₹29900.00‡</p></a></div></div>
+                         <div class="relative">  
+                           <a href="#"><img class="shadow-lg w-1/2"
+                                  src="/img/store-card-40-watch-bands-202403.jpeg" alt="Watch Bands"><div class="absolute  top-8 left-10"><p class="text-gray-500">
+                                    NEW</p>
+                                  <p class="text-4xl font-semibold" > Arm candy. In all-new flavours.</p>
+                                <p class="text-2xl mt-2">Shop the latest strap styles and colours.</p></a></div>
+                           </div>     
+                        </div>          
+                    
+                      <!-- Add more swiper-slide divs for each image -->
+                  </div>
+                 
+               </div>
+             </div>
+            </div></div>
+             <div class="flex font-bold text-4xl ml-20 pt-20  pb-7"><p class="text-red-500">Accessories. </p><p class="text-gray-500"> It’s time to wrap up your Mother’s Day shopping.</p></div>
+             <div class="container mx-auto">
+            <div class="swiper-container flex">
+             <div class="swiper-wrapper ">
+              <!-- Swiper Slides -->
+                <div class="swiper-slide">
+                  <div class="flex space-x-8 ">
+                    <div class="relative">  
+                      <a href="#"><img class="  shadow-lg 1/3" src="/img/store-card-40-mothers-day-202404.jpeg"><div class="absolute  top-8 left-10">
+                      <p class="text-4xl font-semibold">MOTHER’S DAY
+                      Perfect complements.</p></a></div>
+                    </div>  
+                    <div class="relative">    
+                       <a href="#"><img class="shadow-lg 1/3" src="/img/MWR53.jpeg"><div class="absolute top-1 left-10">
+                       <p class="text-2xl font-semibold"> Magic Keyboard for iPad Pro 13" (M4) - US English - Black</p></div><div class="absolute  bottom-8 left-10">
+                       <p class="text-2xl mt-2">MRP ₹33900.00 (Incl. of all taxes)</p></a></div>
+                    </div>
+                    <div class="relative">     
+                      <a href="#"><img class="shadow-lg 1/3" src="/img/homepod-mini-select-yellow-202110.jpeg"><div class="absolute text-2xl  top-8 left-10">
+                      <p class="text-yellow-500 font-bold text-3xl">HomePod mini - Yellow</p></div><div class="absolute  bottom-8 left-10">
+                      <p class="text-2xl "> MRP ₹10900.00 (Incl. of all taxes)</p></a></div>
+                     </div> 
+                  </div>          
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex  space-x-8 ml-8">
+                  <div class="relative">    
+                    <a href="#"><img class=" shadow-lg 1/3" src="/img/airpods-max-select-pink-202011.jpeg"><div class="absolute  top-8 left-10">
+                    <p class="text-red-400 font-bold text-3xl" >AirPods Max - Pink</p></div><div class="absolute  bottom-8 left-10">
+                    <p class="text-2xl ">MRP ₹59900.00 (Incl. of all taxes)</p></a></div>
+                  </div>
+                  <div class="relative">    
+                    <a href="#"><img class="shadow-lg 1/3" src="/img/MT253.jpeg"><div class="absolute  top-8 left-10">
+                    <p class="text-pink-900 font-bold text-3xl">iPhone FineWoven Wallet with MagSafe - Mulberry<p>
+                    <p>MRP ₹5900.00 (Incl. of all taxes)</p></a></div>
+                  </div>
+                  <div class="relative">    
+                    <a href="#"><img class="shadow-lg 1/3" src="/img/MK2H3.jpeg"><div class="absolute  top-8 left-10">
+                    <p class="text-purple-300 font-bold text-3xl">Beats Fit Pro True Wireless Earbuds — Stone Purple</p></div><div class="absolute  bottom-8 left-10">
+                    <p class="text-2xl " > MRP ₹22900.00 (Incl. of all taxes)</p></a></div>
+                  </div>
+                  </div>          
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex space-x-8 ml-8">
+                   
+                    <div class="relative">
+                      <a href="#"><img class="shadow-lg 1/3" src="/img/MUUQ3ref.jpeg"><div class="absolute text-2xl  text-gray-500 font-semibold top-8 left-10">
+                      <p>41mm Desert Stone Nike Sport Band - S/M</p></div><div class="absolute text-2xl  bottom-8 left-10">
+                      <p>MRP ₹4500.00 (Incl. of all taxes)</p></a></div>
+                    </div> 
+                    <div class="relative"> 
+                      <a href="#"><img class="shadow-lg 1/3" src="/img/MT2M3.jpeg"><div class="absolute text-2xl  text-gray-500 font-semibold top-8 left-10">
+                      <p>AirTag FineWoven Key Ring - Coral</p>
+                      <p> MRP ₹3900.00 (Incl. of all taxes)
+                        </p></a> </div> 
+                      </div>  
+                      <div class="relative">  
+                        <a href="#"><img class="shadow-lg 1/3"  src="/img/store-card-40-accessories-explore-202405.jpeg"><div class="absolute text-2xl  text-gray-500 font-semibold top-8 left-10"><p>Explore all accessories.- (opens in new window)</p></a>
+                      </div> </div>   
+                  </div>          
+                </div>
+               </div>
+              </div> 
+            </div>    
+            <div class="flex font-bold text-4xl ml-20 pt-20  pb-7"><p class="text-red-500">Personalisation. </p><p class="text-gray-500">Add a little reminder of your love.</p></div>
+            <div class="container mx-auto">
+            <div class="swiper-container flex">
+              <div class="swiper-wrapper ">
+               <!-- Swiper Slides -->
+                 <div class="swiper-slide">
+                   <div class="flex space-x-8 ">
+                    <div class="relative"> 
+                        <a href="#"><img src=" /img/store-card-40-mothers-day-personalization-202404_GEO_IN.jpeg" class="shadow-lg w-1/3"><div class="absolute text-4xl font-semibold   top-8 left-10">
+                        <p>FREE ENGRAVING</p>
+                        <p>Make it uniquely theirs.</p></a></div>
+                    </div>
+                    <div class="relative">   
+                        <a href="#"><img src="/img/MX2D3.jpeg" class=" shadow-lg 1/3"><div class="absolute  top-5 left-5">
+                        <p class="text-gray-500">New</p>
+                        <p class="text-4xl font-semibold "> Apple Pencil Pro</p>
+                        <p class="2xl">MRP ₹11900. <br> (Incl. of all taxes)</p></a></div>
+                      </div>
+                      <div class="relative">   
+                        <a href="#"><img src="img/MTJV3.jpeg" class="shadow-lg w-1/3"><div class="absolute font-semibold top-8 left-10">
+                        <p>Free Engraving
+                        AirPods Pro (2nd generation) with MagSafe Charging Case (USB‑C)</div><div class="absolute text-xl font-semibold bottom-8 left-10">
+                        MRP ₹24900.00 (Incl. of all taxes)</p></a></div>
+                      </div>
+                   </div>          
+                 </div>
+                 <div class="swiper-slide">
+                   <div class="flex space-x-8 ml-8">
+                      <div class="relative">
+                        <a href="#"><img src="img/airtag-4pack-select-202104.jpeg" class="shadow-lg w-1/3"><div class="absolute  text-3xl font-semibold  top-8 left-10">
+                        <p class="text-gray-500 text-xl">Free Engraving</p>
+                        <p>AirTag 4 pack</p>
+                        <p>MRP ₹11900.00 (Incl. of all taxes)</p></a></div>
+                    </div>  
+                    <div class="relative">
+                        <a href="#"><img src="img/MME73.jpeg" class="shadow-lg w-1/3"><div class="absolute font-bold top-5 left-2">
+                        <p>Free Engraving</p>
+                        <p> AirPods <br>(3rd generation) <br> with MagSafe <br> Charging Case</p></div><div class="absolute text-xl font-semibold bottom-5 left-10">
+                        <p>MRP ₹20900.00 (Incl. of all taxes)</p></a></div>
+                      </div>
+                      <div class="relative"> 
+                        <a href="#"><img src="img/MV7N2.jpeg" class="shadow-lg w-1/3"><div class="absolute text-3xl text-gray-500 font-semibold  top-8 left-10">
+                        <p>AirPods (2nd generation)</p></div><div class="absolute text-xl font-semibold bottom-8 left-10">
+                        <p>MRP ₹12900.00 (Incl. of all taxes)
+                        </p></a></div>
+                      </div> 
+                   </div>          
+                  </div>
+                </div> 
+              </div>  </div>
+              <div class="flex font-bold text-4xl ml-20 pt-20  pb-7 ">Help is here. <p class="text-gray-500" >Whenever and however you need it.</p></div>
+              <div class="container mx-auto">
+                <div class="swiper-container flex">
+                  <div class="swiper-wrapper ">
+                   <!-- Swiper Slides -->
+                     <div class="swiper-slide">
+                       <div class="flex space-x-8 ">
+                        <div class="relative transform transition-transform hover:-translate-y-2"> 
+                          <a href="#"><img class="shadow-lg w-1/3" src="img/store-card-50-tv-services-202404.jpeg" >
+                              <div class="absolute  text-gray-100 top-8 left-10">
+                                  <p>APPLE TV+</p>
+                                  <p class="text-4xl font-bold">Get 3 months of</p>
+                                  <p class="text-4xl font-bold"> Apple TV+ free when</p>
+                                  <p class="text-4xl font-bold">you buy an Apple device.°</p>
+                              </div>
+                          </a>
+                        </div>
+                         <div class="relative transform transition-transform hover:-translate-x-2"> 
+                          <a href="#"><img src="/img/store-card-50-subscriptions-202108.jpeg" class=" shadow-lg 1/3">
+                              <div class="absolute text-4xl font-semibold  top-8 left-10">
+                                  <p>Four Apple services. <br>One easy subscription.</p>
+                              </div>
+                          </a>
+                         </div>
+                         <div class="relative">
+                          <a href="#"><img src="/img/store-card-50-applecare-202405.jpeg" class="shadow-lg 1/3">
+                              <div class="absolute  top-8 left-10">
+                                  <p class="text-4xl font-semibold mb-3">We’ve got you covered.</p>
+                                <p class="text-2xl "> AppleCare+ now comes with unlimited <br> repairs for accidental damage protection.</p>
+                              </div>
+                          </a>
+                       </div> 
+                       </div>          
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="flex space-x-8 ml-8">
+                         <div class="relative"> 
+                           <a href="#"><img src="/img/store-card-50-homekit-202405_GEO_IN.jpeg" class="shadow-lg 1/3">
+                               <div class="absolute  top-8 left-10">
+                                   <p class="text-gray-500">HOME</p>
+                                   <p class="text-4xl font-semibold">See how one app can control your entire home.</p></div> </a>
+                          </div>
+                           
+                           </div> 
+                        </div>          
+                       </div>
+                     </div> 
+                    </div>  
+                   <div class="flex font-bold text-4xl ml-20 pt-20  pb-7 bg-gray-100">Special stores.<p class="text-gray-500"> Exclusive savings for students and educators.</p></div>
+                   <div class="relative  bg-gray-100 ml-20 mb-10 ">
+                     <a href="#"><img class=" shadow-lg h-90 w- 100 rounded-3xl transform transition-transform hover:-translate-y-2" src="/img/store-ipad-card-40-education-202405_GEO_IN.jpeg" ><div class="absolute text-5xl  top-10 left-10">
+                       <p class="font-semibold text-gray-500 mb-10">EDUCATION </p>
+                       <p>Save on a new iPad or Mac <br> with education pricing.1</p>
+                     </div></a>
+                   </div>  
+                   
+                   
+
+                 <div class="bg-gray-100 mx-20 ">
+                   <div class="space-x-8 ">
+                     <p class="text-4xl font-semibold ml-10">Quick Links</p> <br>
+                         <button class="border  border-gray-900 rounded-full p-2" type="button">Order Status</button>
+                         <button class=" border border-gray-900 rounded-full p-2" type="button">Shopping Help</button>
+                         <button class=" border border-gray-900 rounded-full p-2" type="button">Your Save</button>
+                  </div>
+                  <div class="container mx-auto mt-10">
+                   <div>
+                     <p>◊◊ Monthly pricing is after purchase using EMI with qualifying cards at 15% pa over a 24 month tenure. Monthly pricing is rounded to the nearest rupee. Exact pricing will be provided by your bank, subject to your bank’s terms and conditions.</p>
+                     <p>Representative:  <br>
+                        Based on purchase of ₹79900.00. Total amount payable ₹92978.00 paid over 24 months as 24 monthly payments of ₹3874.00 at an interest rate of 15% pa.Total interest paid to bank: ₹13078.00.</p>
+                     <p>§ No Cost EMI is available with the purchase of an eligible product made using qualifying cards on 3 or 6 month tenures from most leading banks. Until 26 June 2024, No Cost EMI is available with the purchase of an eligible iPhone made using qualifying cards on 3, 6, 9, 12, 18, 24 month tenures from most leadings banks. Monthly pricing is rounded to the nearest rupee. Exact pricing will be provided by your bank, subject to your bank's terms and conditions. Minimum order spend applies as per your card issuing bank threshold. Offer cannot be combined with Apple Store for Education or Corporate Employee Purchase Plan pricing. Card eligibility is subject to terms and conditions between you and your card issuing bank. Offer may be revised or withdrawn at any time without any prior notice. Terms apply.</p>
+                     <p>Representative examples:<br>
+                     Based on a 6 month tenure. ₹79900.00 total cost includes 15% pa and No Cost EMI savings of ₹3380.00, paid over 6 months as 6 monthly payments of ₹13317.00.
+                     Based off a 24 month tenure. ₹79900.00 total cost includes 15% pa and No Cost EMI savings of ₹11242.00, paid over 24 months as 24 monthly payments of ₹3329.00.</p>
+                     <p>* Trade‑in values will vary based on the condition, year and configuration of your eligible trade‑in device. Not all devices are eligible for credit. You must be at least the age of majority to be eligible to trade in for credit. Trade‑in value may be applied towards a qualifying new device purchase. Actual value awarded is based on receipt of a qualifying device matching the description provided when estimate was made. Sales tax may be assessed on full value of a new device purchase. In-store trade‑in requires presentation of a valid photo ID (local law may require saving this information). Offer may not be available in all stores, and may vary between in-store and online trade‑in. Some stores may have additional requirements. Apple or its trade‑in partners reserve the right to refuse, cancel or limit the quantity of any trade‑in transaction for any reason. More details are available from Apple’s trade‑in partner for trade‑in and recycling of eligible devices. Restrictions and limitations may apply.</p>
+                     <p>° Apple TV+ offer available to new and qualified returning subscribers only. ₹99/month after free trial. Only one offer per Apple ID and only one offer per family if you’re part of a Family Sharing group, regardless of the number of devices that you or your family purchase. This offer is not available if you or your Family have previously accepted an Apple TV+ three-months-free or one-year-free offer. Offer valid for three months after eligible device is activated. Plan automatically renews until cancelled. Restrictions and other terms apply.</p>
+                     <p>1. Special pricing available to qualified customers. To learn more about how to start qualifying for special pricing, talk to an Apple Specialist in a store or give us a call on 000800 040 1966.</p>
+                     <p>‡ Listed pricing is Maximum Retail Price (inclusive of all taxes).</p>
+                     <p>We use your location to show you delivery options faster. We found your location using your IP address or because you entered it during a previous visit to Apple.</p>
+                  </div>
+                  <div >
+                     <a class="flex" href="#"><img class="h-7" src="img/download.png">>Apple Store Online</a>
+                  </div></div>
+                  <footer class="text-black py-4">
+                     <div class="container mx-auto px-4 text-center space-x-8">
+                       Copyright &copy; 2024 Apple Inc. All rights reserved.  Privacy Policy | Terms of Use | Sales Policy | Legal | Site Map
+                     </div>
+                   </footer>
+                 </div>
+       </div>
+</div>
+</div>
+
+<!-- Swiper JS -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+       direction: 'horizontal', // Set direction to horizontal
+       slidesPerView: 3, // Display three slides per view
+       spaceBetween: 0, // Provide spacing between slides
+       loop: true, // Enable loop mode
+       autoplay: {
+       delay:50000, // Autoplay delay in milliseconds
+        },
+
+});
+</script>
+
+</body>
+
+</html>
